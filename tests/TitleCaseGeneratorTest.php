@@ -40,6 +40,18 @@
             //Assert
             $this->assertEquals("Return of the King", $result);
         }
+        function test_makeTitleCase_firstWordAlways()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "the fellowship of the ring";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("The Fellowship of the Ring", $result);
+        }
 
 
     }
