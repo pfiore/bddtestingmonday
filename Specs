@@ -1,0 +1,15 @@
+Spec1
+
+the first letter of each input word should be capitalized. For example, "beowulf" will return "Beowulf".
+
+Spec2
+
+For multiple-word titles, the first letter of each word should be capitalized. For "homer's odyssey" we should return "Homer's Odyssey".
+
+Spec3
+
+For titles with small words, those words will not be capitalized. For "return of the king" we return "Return of the King".
+
+Spec4
+
+For titles which start with small words, those words will be capitalized. For "the epic of gilgamesh" we return "The Epic of Gilgamesh".

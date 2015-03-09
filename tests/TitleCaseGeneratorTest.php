@@ -20,15 +20,26 @@
         {
             //Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "the epic of gilgamesh";
+            $input = "homer's odyssey";
 
             //Act
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
             //Assert
-            $this->assertEquals("The Epic Of Gilgamesh", $result);
+            $this->assertEquals("Homer's Odyssey", $result);
         }
+        function test_makeTitleCase_excludeSmallWords()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "return of the king";
 
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Return of the King", $result);
+        }
 
 
     }
