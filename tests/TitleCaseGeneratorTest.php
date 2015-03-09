@@ -64,6 +64,18 @@
             //Assert
             $this->assertEquals("Killing in the Name Of", $result);
         }
+        function test_makeTitleCase_caseProof()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "the KALevala";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("The Kalevala", $result);
+        }
 
     }
 ?>
