@@ -52,7 +52,18 @@
             //Assert
             $this->assertEquals("The Fellowship of the Ring", $result);
         }
+        function test_makeTitleCase_lastWordAlways()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "killing in the name of";
 
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Killing in the Name Of", $result);
+        }
 
     }
 ?>

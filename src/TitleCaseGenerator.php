@@ -7,9 +7,9 @@ class TitleCaseGenerator
     {
         $input_array_of_words = explode(" ", $input_title);
         $output_titlecased = array();
-        $exclude = array("of", "the", "and", "as", "a", "an", "if");
+        $exclude = array("of", "the", "and", "as", "a", "in", "into", "an", "if");
         $first_word = $input_array_of_words[0];
-
+        $last_word = end($input_array_of_words);
         array_push($output_titlecased, ucfirst($first_word));
         array_shift($input_array_of_words);
 
@@ -21,6 +21,10 @@ class TitleCaseGenerator
                 array_push($output_titlecased, ucfirst($word));
             }
         }
+
+        array_pop($output_titlecased);
+        array_push($output_titlecased, ucfirst($last_word));
+
         return implode(" ", $output_titlecased);
     }
 

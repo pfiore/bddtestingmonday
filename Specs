@@ -13,3 +13,7 @@ For titles with small words, those words will not be capitalized. For "return of
 Spec4
 
 For titles which start with small words, those words will be capitalized. For "the epic of gilgamesh" we return "The Epic of Gilgamesh".
+
+Spec5
+
+For titles with multiple words, always return a capitalized final word. For "killing in the name of" we return "Killing in the Name Of".
